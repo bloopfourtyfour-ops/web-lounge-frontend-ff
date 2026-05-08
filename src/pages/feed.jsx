@@ -27,7 +27,7 @@ export default function Feed() {
     ? JSON.parse(atob(token.split(".")[1]))
     : null;
   const loadPosts = async () => {
-    const res = await axios.get("http://localhost:3000/posts");
+    const res = await axios.get("https://web-lounge-backend-ff.onrender.com/posts");
     setPosts(res.data);
 
     res.data.forEach((post) => {
@@ -36,13 +36,13 @@ export default function Feed() {
   };
 
   const loadNews = async () => {
-    const res = await axios.get("http://localhost:3000/news");
+    const res = await axios.get("https://web-lounge-backend-ff.onrender.com/news");
     setNews(res.data);
   };
 
   const loadComments = async (postId) => {
     const res = await axios.get(
-      `http://localhost:3000/comments/${postId}`
+      `https://web-lounge-backend-ff.onrender.com/comments/${postId}`
     );
 
     setComments((prev) => ({
@@ -53,7 +53,7 @@ export default function Feed() {
 
   const createNews = async () => {
     await axios.post(
-      "http://localhost:3000/news",
+      "https://web-lounge-backend-ff.onrender.com/news",
       { title: newsTitle, text: newsText },
       { headers: { Authorization: token } }
     );
@@ -65,7 +65,7 @@ export default function Feed() {
 
   const createPost = async () => {
     await axios.post(
-      "http://localhost:3000/posts",
+      "https://web-lounge-backend-ff.onrender.com/posts",
       { text },
       { headers: { Authorization: token } }
     );
@@ -180,7 +180,7 @@ export default function Feed() {
                     if (!commentInputs[p._id]) return;
 
                     await axios.post(
-                      "http://localhost:3000/comments",
+                      "https://web-lounge-backend-ff.onrender.com/comments",
                       {
                         postId: p._id,
                         text: commentInputs[p._id]
@@ -241,7 +241,7 @@ export default function Feed() {
                   <button
                     onClick={async () => {
                       await axios.delete(
-                        `http://localhost:3000/posts/${p._id}`,
+                        `https://web-lounge-backend-ff.onrender.com/posts/${p._id}`,
                         {
                           headers: {
                             Authorization: token

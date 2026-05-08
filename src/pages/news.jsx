@@ -6,7 +6,7 @@ export default function News() {
   const [news, setNews] = useState([]);
 
   const loadNews = async () => {
-    const res = await axios.get("http://localhost:3000/news");
+    const res = await axios.get("https://web-lounge-backend-ff.onrender.com/news");
     setNews(res.data);
   };
 

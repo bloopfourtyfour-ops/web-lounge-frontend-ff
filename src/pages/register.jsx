@@ -11,7 +11,7 @@ export default function Register() {
   const register = async () => {
     try {
       await axios.post(
-        "http://localhost:3000/register",
+        "https://web-lounge-backend-ff.onrender.com/register",
         {
           username,
           password

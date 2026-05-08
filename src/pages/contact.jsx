@@ -50,7 +50,7 @@ export default function Contact() {
             }}
           >
             <p>
-              <b>Email:</b> contact@weblounge.dev
+              <b>Email:</b> bloopfourtyfour@gmail.com
             </p>
 
             <p>
@@ -58,7 +58,7 @@ export default function Contact() {
             </p>
 
             <p>
-              <b>Version:</b> 0.1 Alpha
+              <b>Version:</b> 0.1
             </p>
           </div>
         </div>

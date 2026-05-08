@@ -11,7 +11,7 @@ export default function Login() {
   const login = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/login",
+        "https://web-lounge-backend-ff.onrender.com/login",
         {
           username,
           password
